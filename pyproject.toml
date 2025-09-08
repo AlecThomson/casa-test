@@ -57,10 +57,19 @@ docs = [
   "furo>=2023.08.17",
 ]
 
+[project.scripts]
+casa_test_core = "casa_test.main:main"
+
+[tool.hatch.build.targets.wheel.shared-scripts]
+"scripts/casa_test_bash" = "casa_test_bash"
+"scripts/casa_test_casa" = "casa_test_casa"
+"scripts/casa_test_casa_opt" = "casa_test_casa_opt"
+
 
 [tool.hatch]
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/casa_test/_version.py"
+
 
 [tool.hatch.envs.default]
 # duplicate for now since hatch doesn't support groups yet

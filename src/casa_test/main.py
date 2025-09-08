@@ -30,7 +30,7 @@ def do_something(
 def get_parser() -> ArgumentParser:
     parser = ArgumentParser(description="A dummy script using casacore")
 
-    parser.add_argument("ms", type=Path, help="A MeasurementSet.")
+    parser.add_argument("ms", type=Path, help="Path to a MeasurementSet.")
 
     return parser
 
