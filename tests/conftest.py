@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import shutil
+from collections.abc import Generator
 from importlib import resources
 from pathlib import Path
 
@@ -10,8 +11,8 @@ from casa_test import data
 
 
 @pytest.fixture
-def temp_ms(tmpdir: Path) -> Path:
-    ms_zip = Path(resources.files(data)) / "SB39400.RACS_0635-31.beam0.small.ms.zip"
+def temp_ms(tmpdir: Path) -> Generator[Path]:
+    ms_zip = Path(resources.files(data)) / "SB39400.RACS_0635-31.beam0.small.ms.zip"  # type: ignore[arg-type]
 
     out_name = ms_zip.name.replace(".zip", "")
     temp_path = Path(tmpdir)
