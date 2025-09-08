@@ -29,7 +29,9 @@ classifiers = [
   "Typing :: Typed",
 ]
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+    "python-casacore>=3.7.1",
+]
 
 [project.urls]
 Homepage = "https://github.com/Alec Thomson/casa-test"
@@ -45,6 +47,7 @@ test = [
 ]
 dev = [
   { include-group = "test" },
+  "ruff>=0.12.12",
 ]
 docs = [
   "sphinx>=7.0",
