@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 6509ae6
+_src_path: gh:AlecThomson/scientific-python-cookie
+backend: hatch
+email: alec.thomson@skao.int
+full_name: Alec Thomson
+license: MIT
+org: Alec Thomson
+project_name: casa-test
+project_short_description: A CASA test
+url: https://github.com/Alec Thomson/casa-test
+vcs: true
