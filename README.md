@@ -12,12 +12,12 @@
 <!-- SPHINX-START -->
 
 <!-- prettier-ignore-start -->
-[actions-badge]:            https://github.com/Alec Thomson/casa-test/workflows/CI/badge.svg
-[actions-link]:             https://github.com/Alec Thomson/casa-test/actions
+[actions-badge]:            https://github.com/AlecThomson/casa-test/workflows/CI/badge.svg
+[actions-link]:             https://github.com/AlecThomson/casa-test/actions
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/casa-test
 [conda-link]:               https://github.com/conda-forge/casa-test-feedstock
 [github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
-[github-discussions-link]:  https://github.com/Alec Thomson/casa-test/discussions
+[github-discussions-link]:  https://github.com/AlecThomson/casa-test/discussions
 [pypi-link]:                https://pypi.org/project/casa-test/
 [pypi-platforms]:           https://img.shields.io/pypi/pyversions/casa-test
 [pypi-version]:             https://img.shields.io/pypi/v/casa-test
