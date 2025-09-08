@@ -35,7 +35,7 @@ jobs:
         with:
           extra_args: --hook-stage manual --all-files
       - name: Run lint
-        run: uvx nox -s lint -- --output-format=github
+        run: uvx nox -s lint
 
   checks:
     name: Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}
