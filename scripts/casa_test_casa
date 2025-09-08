@@ -9,7 +9,6 @@ from pathlib import Path
 print("Hello from casa")
 
 def get_target_name(vis_path: Path) -> str:
-    tb = table()
     tb.open(str(vis_path / "FIELD"))
     name = str(tb.getcol("NAME")[0])
     tb.close()
