@@ -5,46 +5,46 @@ runs:
   steps:
   - name: Checkout code
     uses: actions/checkout@v4
-  
+
   - name: Install dependencies
     run: |
       sudo apt-get update
       sudo apt-get install -y wget tar xz-utils perl
-  
+
   - name: Set up CASA environment variables
     run: |
       echo "CASABASE=casa-6.6.5-31-py3.10.el8" >> $GITHUB_ENV
       echo "HOME=$GITHUB_WORKSPACE/casa" >> $GITHUB_ENV
-  
+
   - name: Create CASA directory
     run: |
       mkdir -p $GITHUB_WORKSPACE/casa
       cd $GITHUB_WORKSPACE/casa
-  
+
   - name: Download CASA
     working-directory: ${{ github.workspace }}/casa
     run: |
       wget --content-disposition https://casa.nrao.edu/download/distro/casa/release/rhel/${CASABASE}.tar.xz
-  
+
   - name: Extract CASA
     working-directory: ${{ github.workspace }}/casa
     run: |
       tar -xvf ${CASABASE}.tar.xz
       rm -f ${CASABASE}.tar.xz
-  
+
   - name: Set up CASA PATH
     run: |
       echo "$GITHUB_WORKSPACE/casa/${CASABASE}/bin" >> $GITHUB_PATH
-  
+
   - name: Initialize CASA data directory
     run: |
       mkdir -p $HOME/.casa/data
-  
+
   - name: Initialize CASA (download data)
     working-directory: ${{ github.workspace }}/casa
     run: |
       casa --log2term -c "exit"
-  
+
   - name: Verify CASA installation
     run: |
       casa --version
